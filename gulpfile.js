@@ -1,6 +1,6 @@
 var gulp = require('gulp'),
     sass = require('gulp-sass'),
-    browserSync = require('browser-sync');
+    browserSync = require('browser-sync').create();
 
 /** Sass Task */
 gulp.task('sass', function() {
@@ -11,7 +11,7 @@ gulp.task('sass', function() {
 
 /** BrowserSync Task */
 gulp.task('browser-sync', function() {
-    browserSync.create().init({
+    browserSync.init({
         server: {
             baseDir: './',
             index: './src/template/index.html'
@@ -24,8 +24,7 @@ gulp.task('bs-reload', function() {
 
 
 // Watch
-gulp.task('watch', ['sass', 'browser-sync'], function() {
+gulp.task('watch', ['sass', 'browser-sync', 'bs-reload'], function() {
     gulp.watch('src/scss/**/*.scss', ['sass']);
-    gulp.watch('src/template/*.html', ['browser-sync']);
-    gulp.watch('src/*', ['bs-reload']);
+    gulp.watch('src/template/*.html', ['bs-reload']);
 });

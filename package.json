@@ -1,0 +1,26 @@
+{
+  "name": "stickr",
+  "version": "1.0.0",
+  "description": "CSS&HTML UI Framework",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/reyamagu/stickr.git"
+  },
+  "author": "reyamagu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/reyamagu/stickr/issues"
+  },
+  "homepage": "https://github.com/reyamagu/stickr#readme",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-sass": "^2.2.0",
+    "minimist": "~1.2.0",
+    "sc5-styleguide": "~0.3.45",
+    "browser-sync": "~2.12.8"
+  }
+}
